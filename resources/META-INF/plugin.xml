@@ -1,0 +1,21 @@
+<idea-plugin version="1">
+    <id>jpe.jb.QtAssistant</id>
+    <name>JBQtAssistant</name>
+    <version>1.0</version>
+
+    <depends>com.intellij.modules.platform</depends>
+
+    <actions>
+        <action id="JBQtAssistant.Action" class="jpe.jb.QtAssistantAction" text="QtAssistant"
+                description="Runs the Qt Assistant on the current selection">
+            <keyboard-shortcut first-keystroke="control alt a" keymap="$default"/>
+        </action>
+    </actions>
+
+    <project-components>
+        <component>
+            <implementation-class>jpe.jb.QtAssistantPlugin</implementation-class>
+        </component>
+    </project-components>
+
+</idea-plugin>
