@@ -2,15 +2,11 @@ package jpe.jb;
 
 import com.intellij.openapi.actionSystem.AnAction;
 import com.intellij.openapi.actionSystem.AnActionEvent;
-import com.intellij.openapi.actionSystem.DataKeys;
+import com.intellij.openapi.actionSystem.CommonDataKeys;
 import com.intellij.openapi.editor.Editor;
-import com.intellij.openapi.editor.event.SelectionEvent;
-import com.intellij.openapi.project.Project;
 import com.intellij.openapi.ui.MessageType;
 import com.intellij.openapi.ui.popup.Balloon;
 import com.intellij.openapi.ui.popup.JBPopupFactory;
-import com.intellij.openapi.wm.StatusBar;
-import com.intellij.openapi.wm.WindowManager;
 import com.intellij.ui.awt.RelativePoint;
 
 import javax.swing.text.BadLocationException;
@@ -65,7 +61,7 @@ public class QtAssistantAction extends AnAction {
 
     @Override
     public void actionPerformed(AnActionEvent event) {
-        Editor editor = event.getData(DataKeys.EDITOR_EVEN_IF_INACTIVE);
+        Editor editor = event.getData(CommonDataKeys.EDITOR_EVEN_IF_INACTIVE);
         if (editor == null)
             return;
         JTextComponent component = (JTextComponent) editor.getContentComponent();
